@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedicAid</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0px;
+      padding: 0px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #2c3e50;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #ffffff;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      margin: 25px;
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: 100;
+    }
+
+    nav a:hover {
+      color: #ffd369;
+    }
+
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 400px;
+      background: whitesmoke;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      flex-direction: column;
+    }
+
+    .banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 70px;
+    }
+
+    .banner button {
+      background-color: #ffd369;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .banner button:hover {
+      background-color: #e6b93a;
+    }
+
+    /* About */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 50px 20px;
+      background: #fff;
+    }
+
+    .about img {
+      flex: 1;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .about-text h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Services */
+    .services {
+      background: #f9f9f9;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services h2 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    /* Contact */
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 50px 20px;
+      background: #fff;
+    }
+
+    .contact img {
+      flex: 1;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .contact-form {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .contact-form h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background-color: #2c3e50;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #1a252f;
+    }
+
+   
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>MedicAid</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h2>Your Health, Our Priority</h2>
+    <button>Book Appointment</button>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <img src="C:\Users\S KEERTHANA\Documents\web\ex3-about.avif" alt="Clinic">
+    <div class="about-text">
+      <h2>About MedicAid</h2>
+      <p>
+        At MedicAid, we believe healthcare should be simple, affordable, and accessible 
+        for everyone. From booking doctor appointments to ordering medicines online 
+        and accessing lab reports, we are here to make your health journey easier 
+        and more convenient.  
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966488.png" alt="Doctor">
+        <h3>Consult a Doctor</h3>
+        <p>Book online appointments with top specialists near you.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966485.png" alt="Medicine">
+        <h3>Order Medicines</h3>
+        <p>Get genuine medicines delivered at your doorstep.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966490.png" alt="Reports">
+        <h3>Lab Reports</h3>
+        <p>Access diagnostic tests and reports online anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <img src="C:\Users\S KEERTHANA\Documents\web\ex3-contact.jpeg" alt="Contact">
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  
+</body>
+</html>
