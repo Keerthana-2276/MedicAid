@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medicaid Form</title>
+</head>
+<body>
+    <h2>Medicaid Assistance Form</h2>
+    <form id="medicaidForm">
+        <!-- Personal Information -->
+        <label>First Name:</label>
+        <input type="text" id="firstName"><br><br>
+        
+        <label>Last Name:</label>
+        <input type="text" id="lastName"><br><br>
+        
+        <label>Date of Birth:</label>
+        <input type="date" id="dob"><br><br>
+        
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other<br><br>
+        
+        <label>Address:</label>
+        <input type="text" id="address"><br><br>
+        
+        <label>City:</label>
+        <input type="text" id="city"><br><br>
+        
+        <label>State:</label>
+        <select id="state">
+            <option value="">Select State</option>
+            <option value="NY">Tamil Nadu</option>
+            <option value="CA">Kerala</option>
+            <option value="TX">Telangana</option>
+        </select><br><br>
+        
+        <label>Zip Code:</label>
+        <input type="number" id="zipCode"><br><br>
+        
+        <label>Phone:</label>
+        <input type="number" id="phone"><br><br>
+        
+        <label>Email:</label>
+        <input type="email" id="email"><br><br>
+        
+        <!-- Medicaid Information -->
+        <label>Medicaid ID:</label>
+        <input type="text" id="medicaidId"><br><br>
+        
+        <label>Medicine Needed:</label>
+        <input type="text" id="medicine"><br><br>
+        
+        <label>Service Required:</label>
+        <select id="service">
+            <option value="">Select Service</option>
+            <option value="consultation">Consultation</option>
+            <option value="treatment">Treatment</option>
+            <option value="therapy">Therapy</option>
+        </select><br><br>
+        
+        <label>Appointment Date:</label>
+        <input type="date" id="appointmentDate"><br><br>
+        
+        <label>Appointment Time:</label>
+        <input type="time" id="appointmentTime"><br><br>
+        
+        <label>Preferred Doctor:</label>
+        <input type="text" id="doctor"><br><br>
+        
+        <label>Additional Notes:</label>
+        <textarea id="notes"></textarea><br><br>
+        
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <script>
+        document.getElementById('medicaidForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // First Name validation
+            if (document.getElementById('firstName').value === '') {
+                alert('Please enter your first name');
+                return;
+            }
+            
+            // Last Name validation
+            if (document.getElementById('lastName').value === '') {
+                alert('Please enter your last name');
+                return;
+            }
+            
+            // Date of Birth validation
+            if (document.getElementById('dob').value === '') {
+                alert('Please enter your date of birth');
+                return;
+            }
+            
+            // Gender validation
+            const genderSelected = document.querySelector('input[name="gender"]:checked');
+            if (!genderSelected) {
+                alert('Please select your gender');
+                return;
+            }
+            
+            // Address validation
+            if (document.getElementById('address').value === '') {
+                alert('Please enter your address');
+                return;
+            }
+            
+            // City validation
+            if (document.getElementById('city').value === '') {
+                alert('Please enter your city');
+                return;
+            }
+            
+            // State validation
+            if (document.getElementById('state').value === '') {
+                alert('Please select your state');
+                return;
+            }
+            
+            // Zip Code validation (must be exactly 5 digits)
+            const zip = document.getElementById('zipCode').value;
+            if (zip.length !== 5) {
+                alert('Zip Code must be exactly 5 digits');
+                return;
+            }
+
+            // Phone validation (must be exactly 10 digits)
+            const phone = document.getElementById('phone').value;
+            if (phone.length !== 10) {
+                alert('Please enter a valid 10-digit phone number');
+                return;
+            }
+            
+            // Email validation
+            if (document.getElementById('email').value === '') {
+                alert('Please enter your email');
+                return;
+            }
+            
+            // Medicaid ID validation
+            if (document.getElementById('medicaidId').value === '') {
+                alert('Please enter your Medicaid ID');
+                return;
+            }
+            
+            // Medicine validation
+            if (document.getElementById('medicine').value === '') {
+                alert('Please enter the medicine you need');
+                return;
+            }
+            
+            // Service validation
+            if (document.getElementById('service').value === '') {
+                alert('Please select a service');
+                return;
+            }
+            
+            // Appointment Date validation
+            if (document.getElementById('appointmentDate').value === '') {
+                alert('Please select an appointment date');
+                return;
+            }
+            
+            // Appointment Time validation
+            if (document.getElementById('appointmentTime').value === '') {
+                alert('Please select an appointment time');
+                return;
+            }
+            
+            // Doctor validation
+            if (document.getElementById('doctor').value === '') {
+                alert('Please enter a doctor name');
+                return;
+            }
+            
+            // Notes validation
+            if (document.getElementById('notes').value === '') {
+                alert('Please provide additional notes');
+                return;
+            }
+            
+            // If all validations pass
+            alert('Your Medicaid request has been submitted successfully!');
+            document.getElementById('medicaidForm').reset();
+        });
+    </script>
+</body>
+</html>
